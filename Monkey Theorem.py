@@ -2,8 +2,7 @@ import random
 import time
 
 temp = ""
-#charList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "," "," "," "]
-charList = ["m","o","h","a","n","d","a","s","s"]
+charList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "," "," "," "," "]
 
 ending = input("What would you like the text to end with? ")
 
