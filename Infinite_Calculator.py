@@ -1,6 +1,6 @@
 import time
 
-maxExponent = 100000
+maxExponent = 10000000
 
 def setValue(val,exps):
     while val > 10:
