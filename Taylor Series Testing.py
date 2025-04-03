@@ -1,5 +1,6 @@
+import matplotlib.pyplot as plt 
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 
 xMin = -5
 xMax = 5
