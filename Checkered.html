@@ -18,11 +18,11 @@
             let y = 0; // y position
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height); // remove previous
-            size = parseInt(slider.value)
-            let drawRight = true;
-            let drawDown = true;
-            while (x < canvas.width) {
-                while (y < canvas.height) {
+            size = parseInt(slider.value); // convert to int
+            let drawRight = true; // row starts with black or not
+            let drawDown = true; // alternates down the row
+            while (x < canvas.width) { // until the bottom of the canvas
+                while (y < canvas.height) { // until the right of the canvas
                     if (drawDown && drawRight || !drawDown && !drawRight) {
                         ctx.fillRect(x, y, size, size);
                     }
@@ -41,7 +41,7 @@
             draw();
         });
 
-        window.addEventListener('resize', () => {
+        window.addEventListener('resize', () => { // to resize canvas to window
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             draw();
