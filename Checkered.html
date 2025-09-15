@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="range" id="sizeSlider" min="1" max="200" value="100">
+    <p id="squareSize"></p>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const slider = document.getElementById("sizeSlider");
+        const sizeText = document.getElementById("squareSize");
+        const canvas = document.getElementById("canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        sizeText.textContent = "Size: " + slider.value;
+
+        function draw() {
+            let x = 0; // x position
+            let y = 0; // y position
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // remove previous
+            size = parseInt(slider.value)
+            let drawRight = true;
+            let drawDown = true;
+            while (x < canvas.width) {
+                while (y < canvas.height) {
+                    if (drawDown && drawRight || !drawDown && !drawRight) {
+                        ctx.fillRect(x, y, size, size);
+                    }
+                    y = y + size;
+                    drawRight = !drawRight;
+                }
+                x = x + size;
+                y = 0;
+                drawDown = !drawDown;
+                drawRight = true;
+            }
+        }
+        
+        slider.addEventListener('input', () => {
+            sizeText.textContent = "Size: " + slider.value;
+            draw();
+        });
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            draw();
+        });
+
+        draw();
+    </script>
+</body>
+</html>
