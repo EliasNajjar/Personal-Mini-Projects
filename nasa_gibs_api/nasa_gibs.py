@@ -27,5 +27,5 @@ img = wms.getmap(
 )
 
 # Save image to file
-with open('NASA GIBS API/map.png', 'wb') as f:
+with open('map.png', 'wb') as f:
     f.write(img.read())
