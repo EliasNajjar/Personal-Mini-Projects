@@ -1,0 +1,4 @@
+Compile in shell with curl installed with these commands:
+cd /c/path...
+g++ overpass_map.cpp -o overpass_map.exe -lcurl
+./overpass_map.exe
