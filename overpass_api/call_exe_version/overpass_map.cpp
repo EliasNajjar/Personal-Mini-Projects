@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "C:\Users\elias\anaconda3\envs\geospatial\Library\include\curl\curl.h"
+#include <curl/curl.h>
 
 constexpr double CENTER_LAT = 38.0389;   // <-- change me
 constexpr double CENTER_LON = -84.5153;   // <-- change me
